@@ -1,0 +1,11 @@
+Simply REST API Module for Nexus Repository ManagerOSS 3.8.0-0
+
+Please find more on swagger http://<nexus_hostname>/#admin/system/api
+
+Quick Start:
+Import Module: import nexus
+Credentials: nexus.nexusConfig={'host':'localhost:8081','credentials':['admin','admin123']}
+Upload: nexus.upload('builds','test','1','nexus.py') # Return 201
+Search: nexus.search({'q':'nexus.py'}) # Return assets in JSON
+Delete: nexus.assets_del('YnVpbGRzOjkzYjliOWViOWE3ZWNiMDZiNTY5OTYyZGEyZDNhNTc5') # Return 204
+
