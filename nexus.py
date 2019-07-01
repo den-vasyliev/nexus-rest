@@ -22,7 +22,7 @@ def _run(cmd, opt='get'):
     assert nexusConfig.get('credentials') is not None, "credentials not defined"
 
     headers = {'Accept': 'application/json'}
-    url = 'http://%s/service/rest/beta/%s' % (nexusConfig['host'], cmd)
+    url = 'http://%s/service/rest/v1/%s' % (nexusConfig['host'], cmd)
 
     if opt == 'get':
         result = requests.get(url, headers=headers, auth=(nexusConfig['credentials'][0], nexusConfig['credentials'][1]))
